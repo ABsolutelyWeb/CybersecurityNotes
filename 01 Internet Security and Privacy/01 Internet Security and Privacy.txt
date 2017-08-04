@@ -1,0 +1,181 @@
+======== INTRODUCTION: ========
+
+Basic Security Tripwires:
+
+How can we find out if someone has been snooping around on our computer? We set tripwires for better security detection capability.
+
+		- Head over to CanaryTokens at https://www.stationx.net/canarytokens/
+		- Press the big red button to create tokens.
+		- Enter in an email that you generally check as well as a description of the tripwire.
+		- Generate the token, scroll down, and select the trigger. I chose "MS Word" in order to
+          "Get notified whenever someone opens [my] canary Word document. It works cross-platform 
+		  and doesn't require macros."
+		- Click to download the document. Every time someone opens this document, you are notified
+		  via the email you provided.
+		  
+		NOTE1:  The major flaw for the downloadable files on the site is that if someone really wants to 
+				access these tripwired files without you knowing, they can open up a security software
+				and prevent the document/file from connecting to the internet and essentially warning the
+				owner that their file was accessed. In this case, I used my security software to prevent
+				Word from being able to access the Internet. Afterwards, I was able to browse the file
+				without triggering the tripwire. 
+				
+		NOTE2:  Application relies on intruder carelessness in order to succeed. You can upload traps on
+				DropBox to see if any of the staff is accessing your stuff. You can make a clickable link
+				in your email to test for security breaches. You can embed emails with invisible gifs that
+				trigger the tripwire immediately upon opening the email (Thunderbird recommended).
+		
+		NOTE3:  Clicking the link in the alert email will show you more information on the intruder including
+		        IP, country of origin, etc. Though that information is likely useless since that probably isn't
+				their real IP or country of origin.
+				
+		NOTE4:  The idea is to place as many of these traps as possible in order to get the intruder to trigger
+		        at least one of them. Later on, I seek to explore how to better react to intrusion.
+				
+				
+What are security assets?
+
+		Security assets are anything that we care about such as photos, credit card info, SSN, account info/passwords,
+		addresses, browser history, privacy, anonymity, etc.
+		
+		
+Privacy vs. Anonymity vs. Pseudonymity
+
+		Privacy is basically nobody seeing what you are doing, but possibly knowing who you are. Privacy is related to
+		content and maintaining confidentiality as well as keeping secrets.
+		
+		Anonymity is nobody knowing who you are, but knowing what you've done or are doing.
+		
+		Pseudonymity is when you wish to retain a reputation against an identity. Such as having an alias on
+		social media AKA a false identity.
+		
+		
+How do we protect our assets?
+
+		We apply security through various security controls such as Tor, VPN, JonDonym, Opsec Encryption, 2FA
+		patching, HTTP filter, firewall, OpenPGP, HTTPS, SSH, etc. We select the appropriate security controls
+		based on the types of threats / adversaries we face. There is no "one size fits all" option when it 
+		comes to security.
+		
+		
+What threats do our assets face?
+
+		Vishing, phishing, spying, adware, spyware, rootkits, RATS, viruses, malware, mass surveillance, 
+		regulating encryption, exploit kits, legalized spying, backdoors, etc. Threats will try to exploit
+		vulnerabilities within our security in order to get to our assets.
+		
+		For example, we could select Tor to mitigate against the threat of mass surveillance by an oppressive
+		regime because the consequences of getting caught is high in terms of identity.
+		
+		
+Who are our potential adversaries?
+
+		Spies, nation-states, hackers, hacker groups, crackers of software, colleagues, oppressive regimes,
+		cyber criminals, law enforcement, ex-partner, governments. Adversaries are the ones organizing threats
+		to attack our security in hopes to access our assets.
+		
+		
+How do we determine a risk level?
+
+		risk to assets = (vulnerabilities X treats X consequences)
+		
+		
+What is a threat landscape or threat model?
+
+		The threats and adversaries that we face.
+		
+		
+Security is TAP.
+
+		Security is a technology, action, and a process. Security controls are not merely technology.
+		They are processes and actions.
+		
+		
+======== Threat Modelling and Risk Assessment ========
+
+
+You can NEVER have 100% security just as you can't have 0 risks. Therefore, your assets can never be 100%
+protected or have complete and total anonymity.
+
+
+High tolerance of risk vs. Less tolerance of risk
+
+		High tolerance of risks means that we will not heavily employ security controls that impact the
+		usability of our software or assets. Less tolerance means that we will employ more aggressive
+		measures to protect our assets at the potential cost of usability.
+		
+		
+Risk-based approach at security
+
+		Applying the right level of security to mitigate the risk without being an overburden and impacting
+		usability. We can choose how big / burdensome our security needs to be to protect our assets.
+		
+		In order to take a risk-based approach, we must do basic threat modelling and risk assessment when
+		selecting security control.
+		
+			- Risk Assessment Process:
+				1. Assets - have a list of all assets to protect.
+				2. Vulnerabilities - Figure out all possible vulnerabilities to your assets.
+				3. Threats - Figure out which threats can exploit these vulnerabilities.
+				4. Adversaries - Figure out who can issue these threats to explout our vulnerabilities.
+				5. Consequences - Determine the consequences of assets being compromised. Understand
+				                  how these compromises can impact your life. If threats and adversaries
+								  are not well known, concentrate on the consequences of compromised
+								  assets in order to come up with a strong security plan.
+			
+			- Apply security controls to the greatest risks first.
+			
+			- Threat Modelling Process
+			  1. Select the best security controls that best mitigate the risks, 
+			  2. Implement these controls, 
+			  3. Assess the controls you have selected for their effectiveness, 
+			  4. Monitor the effectivenes and vulnerabilities of security controls. If weakneses are 
+			     discovered, revisit the Select stage.
+				 
+				 
+Security, Privacy, and Anonymity often clash with one another
+
+		As an example, a feature of a browser might check every site you visit to check if you are on a 
+		malware / virus distribution site. This feature is good for security as it can help in stopping you
+		from going on sites with malware. However, this can also interfere with your privacy and anonymity 
+		since the site is maintaining constant contact with your browser and could be updated on what sites
+		you are visiting and when. Here you must make a compromise between security, privacy, and anonymity.
+		
+		The amount of privacy and anonymity we want is proportional to the amount of security that we need.
+		The more privacy and anonymity we want, the more security controls we will require.
+		
+		
+======== Knowing Yourself As Well As the Threat and Vulnerability Landscape ========
+		
+Defense in depth (layers of defenses): If one defense fails, the others are still there to protect you.
+
+		Prevent - Example can be when we encrypt to prevent intruders from accessing files.
+		Detect - Example can be setting up canary tokens or tripwires to detect intrusion.
+		Recover - Example can be like having backup or ability to recover an account.
+		
+		What you can't prevent, you can detect. What you cannot detect, you recover from.
+		
+		
+Zero Trust Model: Evaluate instead of trusting, mitigate risk by distributing trust
+
+		The less you trust, the lower your risk. You want to minimize the number of things you trust which
+		includes yourself. In order to protect our assets, we need to make decisions on trust which can include
+		people, software, tools, etc. Evaluate instead of trusting. Mitigate the risk by distributing the trust.
+		Trust nothing. Trust no one. Evaluate everything. And distribute the trust.
+		
+		EXAMPLE: Let's say we want to store and sync files online. We need to select a provider that can provide
+		this service such as DropBox. We should not trust that they will not get hacked. We should not trust that
+		the files we upload will be safe. We should not trust that they won't view, lose, or change our files. Ask
+		yourself how important are the files we are uploading and whether or not we can afford them to be compromised.
+		If the files are important, we backup in a separate location client-side and encrypt the files. In this way, we
+		have distributed the trust between services like DropBox and ourselves.
+		
+		
+Zero Knowledge System
+		
+		Crypton and Encryptr are examples of zero knowledge systems. This means that the provider has zero knowledge about
+		what they are hosting for their clients. However, this is merely a claim and not necessarily true.
+
+		
+======== Knowing Your Enemy As Well As the Current Threat and Vulnerability Landscape ========		
+		
