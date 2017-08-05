@@ -176,6 +176,4 @@ Zero Knowledge System
 		Crypton and Encryptr are examples of zero knowledge systems. This means that the provider has zero knowledge about
 		what they are hosting for their clients. However, this is merely a claim and not necessarily true.
 
-		
-======== Knowing Your Enemy As Well As the Current Threat and Vulnerability Landscape ========		
-		
+
