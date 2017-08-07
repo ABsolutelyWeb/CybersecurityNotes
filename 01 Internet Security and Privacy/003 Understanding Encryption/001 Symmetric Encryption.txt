@@ -1,0 +1,64 @@
+Two Main Components of Encryption
+
+	1. Algorithm (public)
+		- publically known
+		- comparable to a padlock
+		
+	2. Key (secret)
+		- secretive like a password
+		- comparable to a key for a padlock
+	
+	Algorithm + Key 
+	
+		- Determines how the plain text will jumble up. plaintext --> cipthertext		
+		- If algorithm and key are weak, then the encryption will be weak.
+		
+	EXAMPLE: 
+	
+		Say we want to send someone (P1) a file, but don't want anyone else to be able to read it.
+		We need something that can encrypt that file. We could use something like winzip and then
+		encrypt and password protect it. It will allow us to pick AES.
+		
+		What is AES?
+		
+			- AES is a "Symmetric Algorithm" meaning it uses 1 key (password).
+			
+			- Once you enter in your password, it becomes the key.
+			
+			256-bit AES vs 128-bit AES
+			
+				- Is the strength of the algorithm. 256 or 128 represent the bit length / key space
+				
+				- The higher the bit length, the stronger (generally) the algorithm because it 
+				  increases the total possible keys that can exist However, the higher the bit length, 
+				  the slower it will be to encrypt / decrypt.
+				
+				- Imagine a door with many locks. You will be well secured, but it will take longer
+				  to open and close it.
+
+What happens if you don't have the key?
+
+	- You have to engage in a brute force attack to guess the key which can take a massive amount of
+	  time. 
+	- There is also something called a dictionary attack which tries every word in the dictionary
+	  against the key. This is typically faster, but if the key is not in the dictionary, it will fail.
+	- Hybrid: You can take the psychology of human behavior and combine it with a dictionary and bruce
+	          force attack. For example, "dragon" is one of top 10 base phrases used in passwords and
+			  we know that numbers are added to the ends of passwords. So we can use "dragon" from the 
+			  dictionary and every number combination at the end of "dragon" to see if the key can be
+			  cracked.
+			  
+			  
+Examples of Symmetric Encryption Algorithms
+
+	- Data Encryption Standard (DES)
+	- Triple-DES (3DES)
+	- Blowfish
+	- RC4
+	- RC5
+	- RC6
+	- Advanced Encryption Standard (AES)
+	
+	Symmetric algorithms are used in most encryption systems that we use everyday such as HTTPS and 
+	TOR. Wherever possible, use AES 256.
+		- AES is fast and currently unbreakable.

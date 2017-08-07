@@ -1,0 +1,14 @@
+What is encryption?
+
+	- Encryption is the process of turning readable data (plain text) into an unreadable form (cipher text).
+
+What is decryption?
+
+	- Decryption is the process of turning that unreadable cipher text back into something that is readable.
+	
+What does HTTPS mean?
+
+	- It means that all the content of the web page is unreadable to anyone who can see data pass them on 
+	  the network (such as govt or ISP). They can only see the destination domain. So if you go to google.com,
+	  anyone between you and google.com can only know that you went to google rather than which specific 
+	  search.

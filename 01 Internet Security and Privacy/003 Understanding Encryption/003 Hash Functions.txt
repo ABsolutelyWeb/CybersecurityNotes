@@ -1,0 +1,12 @@
+============= Hash Functions
+
+In order to securely exchange keys with someone, we need to authenticate them. We must authenticate
+before exchanging. We cannot take a public key and simply assume it's the real key.
+
+	- Other cryptographic technologies: Hash functions & digital signatures. These help provide
+	  authentication or legitimacy of senders and receivers.
+	  
+		- A hash function takes input as data of any size (email, file, word, etc.) and it converts
+		  it via hash function into a fixed size string of characters. Output is called a hash or 
+		  message digest. An important feature of hash functions is that you can never convert back
+		  from digest to input (one-way hash function).

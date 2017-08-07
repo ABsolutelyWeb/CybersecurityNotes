@@ -1,0 +1,49 @@
+Asymmetric / Public & Private Key
+
+	So we have our encrypted file. How do we safely get the password to P1 so they can decrypt it?
+
+	
+What does asymmetric algorithm entail?
+
+	- Recall that a symmetric encryption requires 1 private key / password. Asymmetric encryption 
+	  requires 1 public key and 1 private key (2 keys total). 
+	  
+		Examples of Asymmetric or Public & Private Key Algorithms:
+		
+			1. Rivest-Shamir-Adleman (RSA)  <--- VERY common
+			2. Elliptic curve cryptosystem (ECC)
+			3. Diffie-Hellman (DH)
+			4. El Gamal
+			
+			These asymmetric algorithms help solve the problem of exchanging keys. This allows for
+			the usage of digital signatures. We can use public and private keys to send P1 our 
+			secret key securely without worry of interception.
+			
+				- Any HTTPS site is using public / private keys to use to exchange a symmetric
+				  session key to send you data.
+				  
+				- If you encrypt with private key, you need public to decrypt and vice versa.
+			
+			Private and public keys must be generated at the same time as they are mathematically
+			related.
+			
+			
+How does asymmetric encryption work?
+
+	Say we want to send P1 a file. We take our file and can encrypt it with P1's public key. Then
+	when P1 gets the file, they can decrypt it with their private key. P1 cannot confirm who has 
+	sent the file as there is no authentication. This is done to ensure confidentiality.
+	
+	However, if you encrypt	with your own private key, then you are interested in authentication 
+	(AKA you are interested in assuring P1 that it is you who has sent the file) and P1 can 
+	decrypt with your public key. This process is known as "open message format."
+	
+
+Asymmetric vs Symmetric Encryption
+
+	- Asymmetric has better key distribution (can put public key on site and anyone can send you 
+	  encrypted messages/data), scalability, authentication / nonrepudiation, BUT it is slow and 
+	  mathematically intensive.
+	  
+	- Symmetric is fast / strong, but it is not scalable since you'd have to send your password
+	  to a bunch of people.

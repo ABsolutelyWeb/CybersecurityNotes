@@ -1,0 +1,4 @@
+=========== Digital Signatures
+
+A digital signature is a hash value AKA a fixed-length result of a hash function that is encryped with the sender's 
+private key to produce the signed message or digital signature AKA a stamp of approval / authentication.
